@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video / Audio Call</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="call-wrapper">
+  <aside class="call-sidebar">
+    <h2>Essence Chat</h2>
+    <div class="stories-section">
+      <h3>Stories</h3>
+      <div class="story-list">
+        <div class="story">Alice</div>
+        <div class="story">Bob</div>
+        <div class="story">Charlie</div>
+      </div>
+    </div>
+    <a href="chat.html" class="back-chat">Back to Chat</a>
+  </aside>
+  <main class="call-main">
+    <div class="video-grid">
+      <video id="localVideo" autoplay muted></video>
+      <video id="remoteVideo" autoplay></video>
+    </div>
+    <div class="call-controls">
+      <input type="text" id="roomInput" placeholder="Enter room ID">
+      <button id="joinCall">Join Call</button>
+    </div>
+  </main>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
